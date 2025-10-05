@@ -10,11 +10,11 @@ import { query } from 'firebase/firestore'
 const {isAuthenticated} = useAuth()
 
 const routes = [
-  { path: '/', name: 'Home', component: HomePage },
-  { path: '/other', name: 'Other', component: () => import('@/views/OtherPage.vue') },
-  { path: '/employees/:id', name: 'CardDetails', component: CardDetails },
-  { path: '/Login', name: 'LoginPage', component: LoginPage },
-  { path: '/settings', name: 'SettingsPage', component: SettingsPage, meta: {reqiuresAuth: true} },
+  { path: '/company-directory', name: 'Home', component: HomePage },
+  { path: '/company-directory/other', name: 'Other', component: () => import('@/views/OtherPage.vue') },
+  { path: '/company-directory/employees/:id', name: 'CardDetails', component: CardDetails },
+  { path: '/company-directory/Login', name: 'LoginPage', component: LoginPage },
+  { path: '/company-directory/settings', name: 'SettingsPage', component: SettingsPage, meta: {reqiuresAuth: true} },
 ]
 
 const router = createRouter({
